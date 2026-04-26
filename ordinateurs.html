@@ -103,8 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 </script>
 
-
-
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Ordinateurs</span>
 </div>
@@ -113,58 +111,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="filters">
 
-  <!-- LEFT: FILTER BUTTON -->
+  <!-- FILTER BUTTON -->
   <button class="filter-btn" onclick="toggleFilter()">
     <i class="fa-solid fa-filter"></i> Filtrer
   </button>
 
-  <!-- CENTER: INLINE FILTER OPTIONS -->
+  <!-- FILTER OPTIONS -->
   <div class="filter-inline" id="filterPanel">
-  <span onclick="filterBrand('all', this)" class="active">Tous</span>
-  <span onclick="filterBrand('hp', this)">HP</span>
-  <span onclick="filterBrand('dell', this)">Dell</span>
-  <span onclick="filterBrand('lenovo', this)">Lenovo</span>
-  <span onclick="filterBrand('acer', this)">Acer</span>
-</div>
-
-  <!-- RIGHT: SORT -->
-  <select class="sort-select" onchange="sortProducts(this.value)">
-    <option value="default">Trier</option>
-    <option value="asc">Prix ↑</option>
-    <option value="desc">Prix ↓</option>
-  </select>
+    <span onclick="filterBrand('all', this)" class="active">Tous</span>
+    <span onclick="filterBrand('hp', this)">HP</span>
+    <span onclick="filterBrand('dell', this)">Dell</span>
+    <span onclick="filterBrand('lenovo', this)">Lenovo</span>
+    <span onclick="filterBrand('acer', this)">Acer</span>
+  </div>
 
 </div>
 <script>
-const productsContainer = document.querySelector(".products");
-let products = Array.from(document.querySelectorAll(".product"));
+document.addEventListener("DOMContentLoaded", function () {
 
-function toggleFilter() {
-  const panel = document.getElementById("filterPanel");
-  panel.style.display = panel.style.display === "flex" ? "none" : "flex";
-}
+  const products = Array.from(document.querySelectorAll(".product"));
 
-function filterBrand(brand) {
-  products.forEach(product => {
-    if (brand === "all" || product.dataset.brand === brand) {
-      product.style.display = "flex";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
+  // SHOW / HIDE FILTER BAR
+  window.toggleFilter = function () {
+    const panel = document.getElementById("filterPanel");
+    panel.style.display = panel.style.display === "flex" ? "none" : "flex";
+  };
 
-function sortProducts(type) {
-  let sorted = [...products];
+  // FILTER BY BRAND
+  window.filterBrand = function (brand, el) {
 
-  if (type === "asc") {
-    sorted.sort((a, b) => a.dataset.price - b.dataset.price);
-  } else if (type === "desc") {
-    sorted.sort((a, b) => b.dataset.price - a.dataset.price);
-  }
+    // highlight active button
+    document.querySelectorAll(".filter-inline span").forEach(btn => {
+      btn.classList.remove("active");
+    });
+    el.classList.add("active");
 
-  sorted.forEach(el => productsContainer.appendChild(el));
-}
+    // filter products
+    products.forEach(product => {
+      if (brand === "all" || product.dataset.brand === brand) {
+        product.style.display = "flex";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  };
+
+});
 </script>
 
 <div class="products">
@@ -177,7 +169,7 @@ function sortProducts(type) {
   <div class="info">
     <h3>HP Laptop 250 G8</h3>
     <p class="specs">
-      Intel Core i5 (10th Gen), 8GB RAM, 256GB SSD, 15.6” écran
+      Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran
     </p>
   </div>
 

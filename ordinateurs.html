@@ -1,0 +1,245 @@
+<!-- HEADER -->
+<header class="header">
+
+  <div class="top-bar">
+    <button class="menu-btn">☰</button>
+
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+      <span>ETS MAHAMAT AL AMINE ADAM</span>
+    </div>
+
+    <div class="icons">
+      <span id="search-icon">🔍</span>
+      🛒
+    </div>
+  </div>
+
+  <!-- MENU -->
+<div class="dropdown-menu" id="dropdownMenu">
+
+  <button class="close-btn" onclick="closeDropdown()">✖</button>
+
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="ordinateurs.html">Ordinateurs</a></li>
+    <li><a href="#">Imprimantes</a></li>
+    <li><a href="#">Fournitures scolaires</a></li>
+    <li><a href="#">Accessoires</a></li>
+    <li><a href="#">Livres & registres</a></li>
+    <li><a href="contacts.html">Contact</a></li>
+  </ul>
+
+  <!-- SOCIAL MEDIA -->
+  <div class="menu-social">
+  <a href="https://facebook.com/Ibrahim Mahamat Al Amine" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://instagram.com/ibra.alamine7" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://wa.me/60178251408" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+</div>
+<script>
+function goHome() {
+  closeDropdown(); // close menu
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.querySelector(".menu-btn");
+  const dropdown = document.getElementById("dropdownMenu");
+
+  menuBtn.onclick = () => {
+    dropdown.classList.add("active");
+  };
+
+  window.closeDropdown = function () {
+    dropdown.classList.remove("active");
+  };
+
+});
+</script>
+  
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Rechercher un produit...">
+  </div>
+
+</header>
+<!-- SCRIPT -->
+<script>
+  const icon = document.getElementById("search-icon");
+  const bar = document.getElementById("searchBar");
+
+  icon.onclick = () => {
+    bar.style.display = (bar.style.display === "block") ? "none" : "block";
+  };
+</script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordinateurs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a> › <span>Ordinateurs</span>
+</div>
+
+<h2 class="page-title">ORDINATEURS</h2>
+
+<div class="filters">
+
+  <!-- LEFT: FILTER BUTTON -->
+  <button class="filter-btn" onclick="toggleFilter()">
+    <i class="fa-solid fa-filter"></i> Filtrer
+  </button>
+
+  <!-- CENTER: INLINE FILTER OPTIONS -->
+  <div class="filter-inline" id="filterPanel">
+  <span onclick="filterBrand('all', this)" class="active">Tous</span>
+  <span onclick="filterBrand('hp', this)">HP</span>
+  <span onclick="filterBrand('dell', this)">Dell</span>
+  <span onclick="filterBrand('lenovo', this)">Lenovo</span>
+  <span onclick="filterBrand('acer', this)">Acer</span>
+</div>
+
+  <!-- RIGHT: SORT -->
+  <select class="sort-select" onchange="sortProducts(this.value)">
+    <option value="default">Trier</option>
+    <option value="asc">Prix ↑</option>
+    <option value="desc">Prix ↓</option>
+  </select>
+
+</div>
+<script>
+const productsContainer = document.querySelector(".products");
+let products = Array.from(document.querySelectorAll(".product"));
+
+function toggleFilter() {
+  const panel = document.getElementById("filterPanel");
+  panel.style.display = panel.style.display === "flex" ? "none" : "flex";
+}
+
+function filterBrand(brand) {
+  products.forEach(product => {
+    if (brand === "all" || product.dataset.brand === brand) {
+      product.style.display = "flex";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+function sortProducts(type) {
+  let sorted = [...products];
+
+  if (type === "asc") {
+    sorted.sort((a, b) => a.dataset.price - b.dataset.price);
+  } else if (type === "desc") {
+    sorted.sort((a, b) => b.dataset.price - a.dataset.price);
+  }
+
+  sorted.forEach(el => productsContainer.appendChild(el));
+}
+</script>
+
+<div class="products">
+
+  <!-- PRODUCT 1 -->
+  <a href="produit.html" class="product">
+
+  <img src="images/hp-laptop250g8-p1.jfif">
+
+  <div class="info">
+    <h3>HP Laptop 250 G8</h3>
+    <p class="specs">
+      Intel Core i5 (10th Gen), 8GB RAM, 256GB SSD, 15.6” écran
+    </p>
+  </div>
+
+  <span class="price">350 000 FCFA</span>
+
+</a>
+
+  <!-- PRODUCT 2 -->
+<a href="produit.html" class="product">
+  <img src="images/dellinspiron153511-p1.jfif">
+
+  <div class="info">
+    <h3>Dell Inspiron 3511</h3>
+    <p class="specs">Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran</p>
+  </div>
+
+  <span class="price">300 000 FCFA</span>
+</a>
+
+<!-- PRODUCT 3 -->
+<a href="produit.html" class="product">
+  <img src="images/lenovothinkpade14-p1.jfif">
+
+  <div class="info">
+    <h3>Lenovo ThinkPad E14</h3>
+    <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
+  </div>
+
+  <span class="price">420 000 FCFA</span>
+</a>
+
+<!-- PRODUCT 4 -->
+<a href="produit.html" class="product">
+  <img src="images/delllatitude342-p1.jfif">
+
+  <div class="info">
+    <h3>Dell Latitude 3420</h3>
+    <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
+  </div>
+
+  <span class="price">450 000 FCFA</span>
+</a>
+
+<!-- PRODUCT 5 -->
+<a href="produit.html" class="product">
+  <img src="images/hp-pavilion15-p1.jfif">
+
+  <div class="info">
+    <h3>HP Pavilion 15</h3>
+    <p class="specs">Intel Core i7, 16GB RAM, 512GB SSD, 15.6” écran</p>
+  </div>
+
+  <span class="price">550 000 FCFA</span>
+</a>
+
+<!-- PRODUCT 6 -->
+<a href="produit.html" class="product">
+  <img src="images/aceraspire5-p1.jfif">
+
+  <div class="info">
+    <h3>Acer Aspire 5</h3>
+    <p class="specs">Intel Core i3, 8GB RAM, 256GB SSD, 15.6” écran</p>
+  </div>
+
+  <span class="price">380 000 FCFA</span>
+</a>
+
+</div>
+
+</body>
+</html>

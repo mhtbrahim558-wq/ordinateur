@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ordinateurs</title>
+  <title>Fournitures</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -102,12 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
     bar.style.display = (bar.style.display === "block") ? "none" : "block";
   };
 </script>
-
 <div class="breadcrumb">
-  <a href="index.html">Accueil</a> › <span>Ordinateurs</span>
+  <a href="index.html">Accueil</a> › <span>Fournitures</span>
 </div>
 
-<h2 class="page-title">ORDINATEURS</h2>
+<h2 class="page-title">FOURNITURES</h2>
 
 <div class="filters">
 
@@ -118,12 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- FILTER OPTIONS -->
   <div class="filter-inline" id="filterPanel">
-    <span onclick="filterBrand('all', this)" class="active">Tous</span>
-    <span onclick="filterBrand('hp', this)">HP</span>
-    <span onclick="filterBrand('dell', this)">Dell</span>
-    <span onclick="filterBrand('lenovo', this)">Lenovo</span>
-    <span onclick="filterBrand('acer', this)">Acer</span>
-  </div>
+  <span onclick="filterBrand('all', this)" class="active">Tous</span>
+  <span onclick="filterBrand('cahier', this)">Cahiers</span>
+  <span onclick="filterBrand('stylo', this)">Stylos</span>
+  <span onclick="filterBrand('sac', this)">Sacs</span>
+  <span onclick="filterBrand('crayon', this)">Crayons</span>
+  <span onclick="filterBrand('regle', this)">Règles</span>
+  <span onclick="filterBrand('calculatrice', this)">Calculatrices</span>
+</div>
 
 </div>
 <script>
@@ -165,83 +166,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="products">
 
-  <!-- PRODUCT 1 -->
-  <a href="produit.html" class="product" data-brand="hp">
-
-  <img src="images/hp-laptop250g8-p1.jfif">
-
+<!-- CAHIER -->
+<a class="product" data-brand="cahier">
+  <img src="images/cahier.jfif">
   <div class="info">
-    <h3>HP Laptop 250 G8</h3>
-    <p class="specs">
-      Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran
-    </p>
+    <h3>Cahier 200 pages</h3>
+    <p class="specs">Grand format, lignes</p>
   </div>
-
-  <span class="price">350 000 FCFA</span>
-
+  <span class="price">2 000 FCFA</span>
 </a>
 
-  <!-- PRODUCT 2 -->
-<a href="produit.html" class="product" data-brand="dell">
-  <img src="images/dellinspiron153511-p1.jfif">
-
+<!-- STYLO -->
+<a class="product" data-brand="stylo">
+  <img src="images/stylos.jfif">
   <div class="info">
-    <h3>Dell Inspiron 3511</h3>
-    <p class="specs">Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran</p>
+    <h3>Stylo BIC (pack)</h3>
+    <p class="specs">Bleu, noir, rouge</p>
   </div>
-
-  <span class="price">300 000 FCFA</span>
+  <span class="price">1 500 FCFA</span>
 </a>
 
-<!-- PRODUCT 3 -->
-<a href="produit.html" class="product" data-brand="lenovo">
-  <img src="images/lenovothinkpade14-p1.jfif">
-
+<!-- SAC -->
+<a class="product" data-brand="sac">
+  <img src="images/sac.jfif">
   <div class="info">
-    <h3>Lenovo ThinkPad E14</h3>
-    <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
+    <h3>Sac à dos scolaire</h3>
+    <p class="specs">Résistant, multi-poches</p>
   </div>
-
-  <span class="price">420 000 FCFA</span>
+  <span class="price">15 000 FCFA</span>
 </a>
 
-<!-- PRODUCT 4 -->
-<a href="produit.html" class="product" data-brand="dell">
-  <img src="images/delllatitude342-p1.jfif">
-
+<!-- CRAYON -->
+<a class="product" data-brand="crayon">
+  <img src="images/crayons.jfif">
   <div class="info">
-    <h3>Dell Latitude 3420</h3>
-    <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
+    <h3>Crayons HB (pack)</h3>
+    <p class="specs">Écriture et dessin</p>
   </div>
-
-  <span class="price">450 000 FCFA</span>
+  <span class="price">1 000 FCFA</span>
 </a>
 
-<!-- PRODUCT 5 -->
-<a href="produit.html" class="product" data-brand="hp">
-  <img src="images/hp-pavilion15-p1.jfif">
-
+<!-- REGLE -->
+<a class="product" data-brand="regle">
+  <img src="images/regle.jfif">
   <div class="info">
-    <h3>HP Pavilion 15</h3>
-    <p class="specs">Intel Core i7, 16GB RAM, 512GB SSD, 15.6” écran</p>
+    <h3>Règle 30cm</h3>
+    <p class="specs">Plastique solide</p>
   </div>
-
-  <span class="price">550 000 FCFA</span>
+  <span class="price">800 FCFA</span>
 </a>
 
-<!-- PRODUCT 6 -->
-<a href="produit.html" class="product" data-brand="acer">
-  <img src="images/aceraspire5-p1.jfif">
-
+<!-- CALCULATRICE -->
+<a class="product" data-brand="calculatrice">
+  <img src="images/calculatrice.jfif">
   <div class="info">
-    <h3>Acer Aspire 5</h3>
-    <p class="specs">Intel Core i3, 8GB RAM, 256GB SSD, 15.6” écran</p>
+    <h3>Calculatrice scientifique</h3>
+    <p class="specs">Fonctions avancées</p>
   </div>
-
-  <span class="price">380 000 FCFA</span>
+  <span class="price">12 000 FCFA</span>
 </a>
 
 </div>
-
 </body>
 </html>

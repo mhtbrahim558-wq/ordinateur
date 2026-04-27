@@ -108,61 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <h2 class="page-title">FOURNITURES</h2>
 
-<div class="filters">
 
-  <!-- FILTER BUTTON -->
-  <button class="filter-btn" onclick="toggleFilter()">
-    <i class="fa-solid fa-filter"></i> Filtrer
-  </button>
-
-  <!-- FILTER OPTIONS -->
-  <div class="filter-inline" id="filterPanel">
-  <span onclick="filterBrand('all', this)" class="active">Tous</span>
-  <span onclick="filterBrand('cahier', this)">Cahiers</span>
-  <span onclick="filterBrand('stylo', this)">Stylos</span>
-  <span onclick="filterBrand('sac', this)">Sacs</span>
-  <span onclick="filterBrand('crayon', this)">Crayons</span>
-  <span onclick="filterBrand('regle', this)">Règles</span>
-  <span onclick="filterBrand('calculatrice', this)">Calculatrices</span>
-</div>
-
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const products = document.querySelectorAll(".product");
-  const panel = document.getElementById("filterPanel");
-
-  // ✅ FIXED TOGGLE
-  window.toggleFilter = function () {
-    if (panel.style.display === "flex") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "flex";
-    }
-  };
-
-  // FILTER FUNCTION (same as before)
-  window.filterBrand = function (brand, el) {
-
-    document.querySelectorAll(".filter-inline span").forEach(btn => {
-      btn.classList.remove("active");
-    });
-    if (el) el.classList.add("active");
-
-    products.forEach(product => {
-      const productBrand = product.dataset.brand;
-
-      if (brand === "all" || productBrand === brand) {
-        product.style.display = "";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  };
-
-});
-</script>
 
 <div class="products">
 

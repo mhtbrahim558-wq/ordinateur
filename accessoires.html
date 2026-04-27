@@ -119,13 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- FILTER OPTIONS -->
   <div class="filter-inline" id="filterPanel">
     <span onclick="filterBrand('all', this)" class="active">Tous</span>
-    <span onclick="filterBrand('souris', this)">Souris</span>
-    <span onclick="filterBrand('usb', this)">USB</span>
-    <span onclick="filterBrand('disque-dur', this)">Disque Dur</span>
-    <span onclick="filterBrand('casques', this)">Casques</span>
-    <span onclick="filterBrand('cartouche', this)">Cartouche</span>
-    <span onclick="filterBrand('toner', this)">Toner</span>
-    <span onclick="filterBrand('clavier', this)">Clavier</span>
+    <span onclick="filterBrand('ordinateur', this)">Ordinateur</span>
+    <span onclick="filterBrand('imprimante', this)">Imprimante</span>
     
   </div>
 
@@ -169,81 +164,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="products">
 
-    <a class="product" data-brand="usb">
+<!-- USB -->
+<a class="product" data-brand="ordinateur">
   <img src="images/usb128gb.jfif">
   <div class="info">
     <h3>Clé USB Kingston 128GB</h3>
-    <p class="specs">USB 3.0</p>
+    <p class="specs">USB 3.0, haute vitesse</p>
   </div>
   <span class="price">8 000 FCFA</span>
 </a>
 
-<a class="product" data-brand="disque-dur">
+<!-- DISQUE DUR -->
+<a class="product" data-brand="ordinateur">
   <img src="images/1tbdisquedur.jfif">
   <div class="info">
     <h3>Disque Dur 1TB</h3>
-    <p class="specs">Portable</p>
+    <p class="specs">Portable, USB 3.0</p>
   </div>
   <span class="price">55 000 FCFA</span>
 </a>
 
-<a class="product" data-brand="souris">
+<!-- SOURIS 1 -->
+<a class="product" data-brand="ordinateur">
   <img src="images/sourislogitechm90.jfif">
   <div class="info">
-    <h3>Souris filaire</h3>
-  </div>
-  <span class="price">5 000 FCFA</span>
-</a>
-<a class="product" data-brand="souris">
-  <img src="images/sourishp280.jpg">
-  <div class="info">
-    <h3>Souris filaire</h3>
+    <h3>Souris Logitech M90</h3>
+    <p class="specs">Filaire, USB</p>
   </div>
   <span class="price">5 000 FCFA</span>
 </a>
 
-<a class="product" data-brand="casques">
+<!-- SOURIS 2 -->
+<a class="product" data-brand="ordinateur">
+  <img src="images/sourishp280.jpg">
+  <div class="info">
+    <h3>Souris HP 280</h3>
+    <p class="specs">Filaire, ergonomique</p>
+  </div>
+  <span class="price">5 000 FCFA</span>
+</a>
+
+<!-- CASQUE -->
+<a class="product" data-brand="ordinateur">
   <img src="images/casques.jfif">
   <div class="info">
-    <h3>Casque audio</h3>
+    <h3>Casque Audio</h3>
+    <p class="specs">Micro intégré, jack 3.5mm</p>
   </div>
   <span class="price">12 000 FCFA</span>
 </a>
 
-<a class="product" data-brand="cartouche">
+<!-- CLAVIER -->
+<a class="product" data-brand="ordinateur">
+  <img src="images/clavier.png">
+  <div class="info">
+    <h3>Clavier Filaire USB</h3>
+    <p class="specs">AZERTY, pavé numérique</p>
+  </div>
+  <span class="price">12 000 FCFA</span>
+</a>
+
+<!-- CARTOUCHE CANON -->
+<a class="product" data-brand="imprimante">
   <img src="images/cartouchecanon545.jfif">
   <div class="info">
-    <h3>Cartouche CANON 545</h3>
+    <h3>Cartouche Canon 545</h3>
+    <p class="specs">Noir, PIXMA</p>
   </div>
   <span class="price">18 000 FCFA</span>
 </a>
-<a class="product" data-brand="cartouche">
+
+<!-- CARTOUCHE HP -->
+<a class="product" data-brand="imprimante">
   <img src="images/cartouchehp305.jfif">
   <div class="info">
     <h3>Cartouche HP 305</h3>
+    <p class="specs">Noir / Couleur</p>
   </div>
   <span class="price">18 000 FCFA</span>
 </a>
 
-<a class="product" data-brand="toner">
+<!-- TONER -->
+<a class="product" data-brand="imprimante">
   <img src="images/hptoner206a.jfif">
   <div class="info">
     <h3>Toner HP 206A</h3>
+    <p class="specs">LaserJet, haute capacité</p>
   </div>
   <span class="price">45 000 FCFA</span>
 </a>
-
-<a class="product" data-brand="clavier">
-  <img src="images/clavier.png">
-
-  <div class="info">
-    <h3>Clavier Filaire USB</h3>
-    <p class="specs">AZERTY, pavé numérique, USB</p>
-  </div>
-
-  <span class="price">12 000 FCFA</span>
-</a>
-
 
 </div>
 

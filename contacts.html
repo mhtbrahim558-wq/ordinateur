@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
-
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
 
 
 <!-- 🔷 CONTACT SECTION -->
@@ -111,10 +106,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <div class="contact-box">
     <p><strong>📍 Adresse :</strong> N'Djamena, Tchad</p>
-    <p><strong>📞 Téléphone :</strong> +60 178251408</p>
-    <p><strong>📧 Email :</strong> mhtbrahim558@gmail.com</p>
+    <div class="phone-block">
+    <span class="phone-title">📞 Téléphone :</span>
 
-    <a href="https://wa.me/60178251408" class="whatsapp-btn">
+    <div class="phone-list">
+      <p><strong>Airtel :</strong> +235 66322486</p>
+      <p><strong>Moov Africa :</strong> +235 99927044</p>
+    </div>
+  </div>
+    <p><strong>📧 Email :</strong> mahamatalamine085@gmail.com</p>
+
+    <a href="https://wa.me/23566322486" class="whatsapp-btn">
       <i class="fab fa-whatsapp"></i> Contacter sur WhatsApp
     </a>
   </div>

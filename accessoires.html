@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
-
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
 
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Accessoires</span>
@@ -165,7 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="products">
 
 <!-- USB -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Clé USB Kingston 128GB&price=8000&img=images/usb128gb.jfif&desc=USB 3.0, haute vitesse&cat=accessoire&brand=Kingston"
+class="product" data-brand="ordinateur">
   <img src="images/usb128gb.jfif">
   <div class="info">
     <h3>Clé USB Kingston 128GB</h3>
@@ -175,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- DISQUE DUR -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Disque Dur 1TB&price=55000&img=images/1tbdisquedur.jfif&desc=Disque dur portable, USB 3.0&cat=accessoire&brand=Seagate"
+class="product" data-brand="ordinateur">
   <img src="images/1tbdisquedur.jfif">
   <div class="info">
     <h3>Disque Dur 1TB</h3>
@@ -185,7 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- SOURIS 1 -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Souris Logitech M90&price=5000&img=images/sourislogitechm90.jfif&desc=Souris filaire USB&cat=accessoire&brand=Logitech"
+class="product" data-brand="ordinateur">
   <img src="images/sourislogitechm90.jfif">
   <div class="info">
     <h3>Souris Logitech M90</h3>
@@ -195,7 +193,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- SOURIS 2 -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Souris HP 280&price=5000&img=images/sourishp280.jpg&desc=Souris ergonomique filaire&cat=accessoire&brand=HP"
+class="product" data-brand="ordinateur">
   <img src="images/sourishp280.jpg">
   <div class="info">
     <h3>Souris HP 280</h3>
@@ -205,7 +204,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CASQUE -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Casque Audio&price=12000&img=images/casques.jfif&desc=Casque avec micro, jack 3.5mm&cat=accessoire&brand=Generic"
+class="product" data-brand="ordinateur">
   <img src="images/casques.jfif">
   <div class="info">
     <h3>Casque Audio</h3>
@@ -215,7 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CLAVIER -->
-<a class="product" data-brand="ordinateur">
+<a href="produit.html?name=Clavier Filaire USB&price=12000&img=images/clavier.png&desc=Clavier AZERTY avec pavé numérique&cat=accessoire&brand=Generic"
+class="product" data-brand="ordinateur">
   <img src="images/clavier.png">
   <div class="info">
     <h3>Clavier Filaire USB</h3>
@@ -225,7 +226,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CARTOUCHE CANON -->
-<a class="product" data-brand="imprimante">
+<a href="produit.html?name=Cartouche Canon 545&price=18000&img=images/cartouchecanon545.jfif&desc=Cartouche noire pour imprimante Canon PIXMA&cat=accessoire&brand=Canon"
+class="product" data-brand="imprimante">
   <img src="images/cartouchecanon545.jfif">
   <div class="info">
     <h3>Cartouche Canon 545</h3>
@@ -235,7 +237,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CARTOUCHE HP -->
-<a class="product" data-brand="imprimante">
+<a href="produit.html?name=Cartouche HP 305&price=18000&img=images/cartouchehp305.jfif&desc=Cartouche HP noir et couleur&cat=accessoire&brand=HP"
+class="product" data-brand="imprimante">
   <img src="images/cartouchehp305.jfif">
   <div class="info">
     <h3>Cartouche HP 305</h3>
@@ -245,7 +248,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- TONER -->
-<a class="product" data-brand="imprimante">
+<a href="produit.html?name=Toner HP 206A&price=45000&img=images/hptoner206a.jfif&desc=Toner LaserJet haute capacité&cat=accessoire&brand=HP"
+class="product" data-brand="imprimante">
   <img src="images/hptoner206a.jfif">
   <div class="info">
     <h3>Toner HP 206A</h3>

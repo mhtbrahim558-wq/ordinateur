@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
 
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
+
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Livres & Registres</span>
 </div>
@@ -160,10 +157,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
 <div class="products">
 
-<!-- LIVRE SCOLAIRE -->
-<a class="product" data-brand="livre">
+<!-- LIVRE MATH -->
+<a href="produit.html?name=Livre de Mathématiques&price=8000&img=images/livre-math.jfif&desc=Secondaire, programme complet&cat=livre&brand=Hachette"
+class="product" data-brand="livre">
   <img src="images/livre-math.jfif">
   <div class="info">
     <h3>Livre de Mathématiques</h3>
@@ -173,7 +172,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- LIVRE FRANÇAIS -->
-<a class="product" data-brand="livre">
+<a href="produit.html?name=Livre de Français&price=7000&img=images/livre-francais.jfif&desc=Grammaire et conjugaison&cat=livre&brand=Hachette"
+class="product" data-brand="livre">
   <img src="images/livre-francais.jfif">
   <div class="info">
     <h3>Livre de Français</h3>
@@ -183,7 +183,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- LIVRE ANGLAIS -->
-<a class="product" data-brand="livre">
+<a href="produit.html?name=Livre d'Anglais&price=7500&img=images/livre-anglais.jfif&desc=Débutant à intermédiaire&cat=livre&brand=Oxford"
+class="product" data-brand="livre">
   <img src="images/livre-anglais.jfif">
   <div class="info">
     <h3>Livre d'Anglais</h3>
@@ -193,7 +194,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- ROMAN -->
-<a class="product" data-brand="roman">
+<a href="produit.html?name=Roman inspirant&price=6000&img=images/roman.jfif&desc=Lecture générale, histoire inspirante&cat=livre&brand=Generic"
+class="product" data-brand="roman">
   <img src="images/roman.jfif">
   <div class="info">
     <h3>Roman - Histoire inspirante</h3>
@@ -203,7 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- REGISTRE COMPTABLE -->
-<a class="product" data-brand="registre">
+<a href="produit.html?name=Registre Comptable&price=5000&img=images/registre-comptable.jfif&desc=Grand format pour usage bureau&cat=livre&brand=Generic"
+class="product" data-brand="registre">
   <img src="images/registre-comptable.jfif">
   <div class="info">
     <h3>Registre Comptable</h3>
@@ -213,7 +216,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- REGISTRE PRESENCE -->
-<a class="product" data-brand="registre">
+<a href="produit.html?name=Registre de Présence&price=4000&img=images/registre-presence.jfif&desc=Pour écoles et entreprises&cat=livre&brand=Generic"
+class="product" data-brand="registre">
   <img src="images/registre-presence.jfif">
   <div class="info">
     <h3>Registre de Présence</h3>
@@ -223,5 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 </div>
+
 </body>
 </html>

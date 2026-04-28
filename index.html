@@ -52,8 +52,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,8 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 
@@ -112,14 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
-
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
 
 <section class="features">
   <div class="feature">

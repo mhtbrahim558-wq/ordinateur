@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
 
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
+
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Fournitures</span>
 </div>
@@ -113,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="products">
 
 <!-- CAHIER -->
-<a class="product" data-brand="cahier">
+<a href="produit.html?name=Cahier 200 pages&price=2000&img=images/cahier.jfif&desc=Grand format, lignes&cat=fourniture&brand=Oxford"
+class="product" data-brand="cahier">
   <img src="images/cahier.jfif">
   <div class="info">
     <h3>Cahier 200 pages</h3>
@@ -123,7 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- STYLO -->
-<a class="product" data-brand="stylo">
+<a href="produit.html?name=Stylo BIC (pack)&price=1500&img=images/stylos.jfif&desc=Bleu, noir, rouge&cat=fourniture&brand=BIC"
+class="product" data-brand="stylo">
   <img src="images/stylos.jfif">
   <div class="info">
     <h3>Stylo BIC (pack)</h3>
@@ -133,7 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- SAC -->
-<a class="product" data-brand="sac">
+<a href="produit.html?name=Sac à dos scolaire&price=15000&img=images/sac.jfif&desc=Résistant, multi-poches&cat=fourniture&brand=Generic"
+class="product" data-brand="sac">
   <img src="images/sac.jfif">
   <div class="info">
     <h3>Sac à dos scolaire</h3>
@@ -143,7 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CRAYON -->
-<a class="product" data-brand="crayon">
+<a href="produit.html?name=Crayons HB (pack)&price=1000&img=images/crayons.jfif&desc=Écriture et dessin&cat=fourniture&brand=Faber-Castell"
+class="product" data-brand="crayon">
   <img src="images/crayons.jfif">
   <div class="info">
     <h3>Crayons HB (pack)</h3>
@@ -153,7 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- REGLE -->
-<a class="product" data-brand="regle">
+<a href="produit.html?name=Règle 30cm&price=800&img=images/regle.jfif&desc=Plastique solide&cat=fourniture&brand=Maped"
+class="product" data-brand="regle">
   <img src="images/regle.jfif">
   <div class="info">
     <h3>Règle 30cm</h3>
@@ -163,7 +165,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 <!-- CALCULATRICE -->
-<a class="product" data-brand="calculatrice">
+<a href="produit.html?name=Calculatrice scientifique&price=12000&img=images/calculatrice.jfif&desc=Fonctions avancées&cat=fourniture&brand=Casio"
+class="product" data-brand="calculatrice">
   <img src="images/calculatrice.jfif">
   <div class="info">
     <h3>Calculatrice scientifique</h3>
@@ -173,5 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
 
 </div>
+
+
 </body>
 </html>

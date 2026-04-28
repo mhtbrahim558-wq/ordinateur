@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
-
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
 
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Ordinateurs</span>
@@ -165,79 +160,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="products">
 
-  <!-- PRODUCT 1 -->
-  <a href="produit.html" class="product" data-brand="hp">
-
+<!-- PRODUCT 1 -->
+<a href="produit.html?name=HP Laptop 250 G8&price=350000&img=images/hp-laptop250g8-p1.jfif&desc=Intel Core i5, 8GB RAM, 256GB SSD, 15.6 écran"
+class="product" data-brand="hp">
   <img src="images/hp-laptop250g8-p1.jfif">
-
   <div class="info">
     <h3>HP Laptop 250 G8</h3>
-    <p class="specs">
-      Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran
-    </p>
+    <p class="specs">Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran</p>
   </div>
-
   <span class="price">350 000 FCFA</span>
-
 </a>
 
-  <!-- PRODUCT 2 -->
-<a href="produit.html" class="product" data-brand="dell">
+<!-- PRODUCT 2 -->
+<a href="produit.html?name=Dell Inspiron 3511&price=300000&img=images/dellinspiron153511-p1.jfif&desc=Intel Core i5, 8GB RAM, 256GB SSD, 15.6 écran"
+class="product" data-brand="dell">
   <img src="images/dellinspiron153511-p1.jfif">
-
   <div class="info">
     <h3>Dell Inspiron 3511</h3>
     <p class="specs">Intel Core i5, 8GB RAM, 256GB SSD, 15.6” écran</p>
   </div>
-
   <span class="price">300 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 3 -->
-<a href="produit.html" class="product" data-brand="lenovo">
+<a href="produit.html?name=Lenovo ThinkPad E14&price=420000&img=images/lenovothinkpade14-p1.jfif&desc=Intel Core i5, 8GB RAM, 512GB SSD, 14 écran"
+class="product" data-brand="lenovo">
   <img src="images/lenovothinkpade14-p1.jfif">
-
   <div class="info">
     <h3>Lenovo ThinkPad E14</h3>
     <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
   </div>
-
   <span class="price">420 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 4 -->
-<a href="produit.html" class="product" data-brand="dell">
+<a href="produit.html?name=Dell Latitude 3420&price=450000&img=images/delllatitude342-p1.jfif&desc=Intel Core i5, 8GB RAM, 512GB SSD, 14 écran"
+class="product" data-brand="dell">
   <img src="images/delllatitude342-p1.jfif">
-
   <div class="info">
     <h3>Dell Latitude 3420</h3>
     <p class="specs">Intel Core i5, 8GB RAM, 512GB SSD, 14” écran</p>
   </div>
-
   <span class="price">450 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 5 -->
-<a href="produit.html" class="product" data-brand="hp">
+<a href="produit.html?name=HP Pavilion 15&price=550000&img=images/hp-pavilion15-p1.jfif&desc=Intel Core i7, 16GB RAM, 512GB SSD, 15.6 écran"
+class="product" data-brand="hp">
   <img src="images/hp-pavilion15-p1.jfif">
-
   <div class="info">
     <h3>HP Pavilion 15</h3>
     <p class="specs">Intel Core i7, 16GB RAM, 512GB SSD, 15.6” écran</p>
   </div>
-
   <span class="price">550 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 6 -->
-<a href="produit.html" class="product" data-brand="acer">
+<a href="produit.html?name=Acer Aspire 5&price=380000&img=images/aceraspire5-p1.jfif&desc=Intel Core i3, 8GB RAM, 256GB SSD, 15.6 écran"
+class="product" data-brand="acer">
   <img src="images/aceraspire5-p1.jfif">
-
   <div class="info">
     <h3>Acer Aspire 5</h3>
     <p class="specs">Intel Core i3, 8GB RAM, 256GB SSD, 15.6” écran</p>
   </div>
-
   <span class="price">380 000 FCFA</span>
 </a>
 

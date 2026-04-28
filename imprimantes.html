@@ -54,8 +54,8 @@
     <i class="fab fa-instagram"></i>
   </a>
 
-  <a href="https://wa.me/60178251408" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://snapchat.com/add/ibra_alamine7" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i>
   </a>
 </div>
 
@@ -89,19 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
   
   <!-- SEARCH BAR -->
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Rechercher un produit...">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
+  <div id="searchResults" class="products"></div>
 
 </header>
 <!-- SCRIPT -->
-<script>
-  const icon = document.getElementById("search-icon");
-  const bar = document.getElementById("searchBar");
-
-  icon.onclick = () => {
-    bar.style.display = (bar.style.display === "block") ? "none" : "block";
-  };
-</script>
+<script src="products.js"></script>
+<script src="search.js"></script>
 
 <div class="breadcrumb">
   <a href="index.html">Accueil</a> › <span>Imprimantes</span>
@@ -164,77 +159,73 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <div class="products">
-<!-- PRODUCT 1 -->
-<a href="produit.html" class="product" data-brand="hp">
-  <img src="images/hpdeskjet2710-p1.jfif">
 
+<!-- PRODUCT 1 -->
+<a href="produit.html?name=HP DeskJet 2710&price=120000&img=images/hpdeskjet2710-p1.jfif&desc=Couleur, WiFi, Scanner, Impression mobile&cat=imprimante&brand=HP"
+class="product" data-brand="hp">
+  <img src="images/hpdeskjet2710-p1.jfif">
   <div class="info">
     <h3>HP DeskJet 2710</h3>
     <p class="specs">Couleur, WiFi, Scanner, Impression mobile</p>
   </div>
-
   <span class="price">120 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 2 -->
-<a href="produit.html" class="product" data-brand="hp">
+<a href="produit.html?name=HP LaserJet 107a&price=150000&img=images/hplaserjetm111w-p1.jfif&desc=Laser noir & blanc, rapide, USB&cat=imprimante&brand=HP"
+class="product" data-brand="hp">
   <img src="images/hplaserjetm111w-p1.jfif">
-
   <div class="info">
     <h3>HP LaserJet 107a</h3>
     <p class="specs">Laser noir & blanc, rapide, USB</p>
   </div>
-
   <span class="price">150 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 3 -->
-<a href="produit.html" class="product" data-brand="canon">
+<a href="produit.html?name=Canon PIXMA MG2540&price=95000&img=images/canonpixmamg2540-p1.jfif&desc=Impression, copie, scanner, couleur&cat=imprimante&brand=Canon"
+class="product" data-brand="canon">
   <img src="images/canonpixmamg2540-p1.jfif">
-
   <div class="info">
     <h3>Canon PIXMA MG2540</h3>
     <p class="specs">Impression, copie, scanner, couleur</p>
   </div>
-
   <span class="price">95 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 4 -->
-<a href="produit.html" class="product" data-brand="canon">
+<a href="produit.html?name=Canon PIXMA G3411&price=220000&img=images/canonpixmag3411-p1.jfif&desc=Réservoir d’encre, WiFi, haute autonomie&cat=imprimante&brand=Canon"
+class="product" data-brand="canon">
   <img src="images/canonpixmag3411-p1.jfif">
-
   <div class="info">
     <h3>Canon PIXMA G3411</h3>
     <p class="specs">Réservoir d’encre, WiFi, haute autonomie</p>
   </div>
-
   <span class="price">220 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 5 -->
-<a href="produit.html" class="product" data-brand="epson">
+<a href="produit.html?name=Epson EcoTank L3150&price=230000&img=images/epsonecotankl3150-p1.jfif&desc=Sans cartouche, WiFi, économique&cat=imprimante&brand=Epson"
+class="product" data-brand="epson">
   <img src="images/epsonecotankl3150-p1.jfif">
-
   <div class="info">
     <h3>Epson EcoTank L3150</h3>
     <p class="specs">Sans cartouche, WiFi, économique</p>
   </div>
-
   <span class="price">230 000 FCFA</span>
 </a>
 
 <!-- PRODUCT 6 -->
-<a href="produit.html" class="product" data-brand="epson">
+<a href="produit.html?name=Epson EcoTank L3210&price=210000&img=images/epsonecotankl3250-p1.jfif&desc=Impression + copie + scanner, USB&cat=imprimante&brand=Epson"
+class="product" data-brand="epson">
   <img src="images/epsonecotankl3250-p1.jfif">
-
   <div class="info">
     <h3>Epson EcoTank L3210</h3>
     <p class="specs">Impression + copie + scanner, USB</p>
   </div>
-
   <span class="price">210 000 FCFA</span>
 </a>
+
 </div>
 
 </body>
